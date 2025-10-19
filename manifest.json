@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "AeroShare",
+  "version": "1.0",
+  "description": "🚀 AI-Powered Smart File Transfer System with Chrome Integration, P2P, Encryption, and TayBot Assistant.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "AeroShare"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "notifications",
+    "downloads",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["style.css", "taybot.js", "script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "commands": {
+    "toggle_demo_mode": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+D"
+      },
+      "description": "Activate Demo Mode for hackathon presentations"
+    }
+  }
+}

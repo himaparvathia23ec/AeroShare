@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroShare Quick Access</title>
+    <style>
+        body {
+            width: 320px;
+            min-height: 200px;
+            margin: 0;
+            padding: 16px;
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 8px;
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+        }
+        .subtitle {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 4px 0 0;
+        }
+        .quick-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .action-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
+        }
+        .status {
+            margin-top: 16px;
+            padding: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 6px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .settings-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button class="settings-btn" id="settingsBtn">⚙️</button>
+    
+    <div class="header">
+        <div class="logo">🚀</div>
+        <h1 class="title">AeroShare</h1>
+        <p class="subtitle">AI-Powered File Transfer</p>
+    </div>
+
+    <div class="quick-actions">
+        <button class="action-btn" id="openApp">
+            <span>📱</span>
+            <span>Open AeroShare</span>
+        </button>
+        <button class="action-btn" id="quickSend">
+            <span>📤</span>
+            <span>Quick Send</span>
+        </button>
+        <button class="action-btn" id="quickReceive">
+            <span>📥</span>
+            <span>Quick Receive</span>
+        </button>
+        <button class="action-btn" id="recentCodes">
+            <span>📋</span>
+            <span>Recent Codes</span>
+        </button>
+    </div>
+
+    <div class="status" id="status">
+        Ready to transfer files
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
